@@ -12,6 +12,11 @@
 		05B51D081F9A95AA008CE2B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B51D061F9A95AA008CE2B3 /* Main.storyboard */; };
 		05B51D0A1F9A95AA008CE2B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B51D091F9A95AA008CE2B3 /* Assets.xcassets */; };
 		05B51D0D1F9A95AA008CE2B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B51D0B1F9A95AA008CE2B3 /* LaunchScreen.storyboard */; };
+		05B51D171F9A96A1008CE2B3 /* ParsedJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D141F9A96A1008CE2B3 /* ParsedJSON.swift */; };
+		05B51D181F9A96A1008CE2B3 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D151F9A96A1008CE2B3 /* Endpoints.swift */; };
+		05B51D191F9A96A1008CE2B3 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D161F9A96A1008CE2B3 /* APIRequestManager.swift */; };
+		05B51D1B1F9AE490008CE2B3 /* TarotCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D1A1F9AE490008CE2B3 /* TarotCard.swift */; };
+		05B51D1D1F9AE4DE008CE2B3 /* Arcana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D1C1F9AE4DE008CE2B3 /* Arcana.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		05B51D091F9A95AA008CE2B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05B51D0C1F9A95AA008CE2B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05B51D0E1F9A95AA008CE2B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05B51D141F9A96A1008CE2B3 /* ParsedJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedJSON.swift; sourceTree = "<group>"; };
+		05B51D151F9A96A1008CE2B3 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		05B51D161F9A96A1008CE2B3 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
+		05B51D1A1F9AE490008CE2B3 /* TarotCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCard.swift; sourceTree = "<group>"; };
+		05B51D1C1F9AE4DE008CE2B3 /* Arcana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcana.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,11 @@
 			children = (
 				05B51D021F9A95AA008CE2B3 /* AppDelegate.swift */,
 				05B51D041F9A95AA008CE2B3 /* ViewController.swift */,
+				05B51D1A1F9AE490008CE2B3 /* TarotCard.swift */,
+				05B51D1C1F9AE4DE008CE2B3 /* Arcana.swift */,
+				05B51D161F9A96A1008CE2B3 /* APIRequestManager.swift */,
+				05B51D151F9A96A1008CE2B3 /* Endpoints.swift */,
+				05B51D141F9A96A1008CE2B3 /* ParsedJSON.swift */,
 				05B51D061F9A95AA008CE2B3 /* Main.storyboard */,
 				05B51D091F9A95AA008CE2B3 /* Assets.xcassets */,
 				05B51D0B1F9A95AA008CE2B3 /* LaunchScreen.storyboard */,
@@ -136,7 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B51D171F9A96A1008CE2B3 /* ParsedJSON.swift in Sources */,
+				05B51D1D1F9AE4DE008CE2B3 /* Arcana.swift in Sources */,
 				05B51D051F9A95AA008CE2B3 /* ViewController.swift in Sources */,
+				05B51D1B1F9AE490008CE2B3 /* TarotCard.swift in Sources */,
+				05B51D191F9A96A1008CE2B3 /* APIRequestManager.swift in Sources */,
+				05B51D181F9A96A1008CE2B3 /* Endpoints.swift in Sources */,
 				05B51D031F9A95AA008CE2B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
