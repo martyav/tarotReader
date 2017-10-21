@@ -98,6 +98,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cardWasTapped(_ sender: UITapGestureRecognizer) {
+        
         guard let tag = sender.view?.tag else { return }
         var card: UIImageView
         
@@ -114,8 +115,9 @@ class ViewController: UIViewController {
         
         guard card.image == nil else { return }
         
+        guard self.cards.count > tag else { return }
+        
         DispatchQueue.main.async {
-            guard self.cards.count > tag else { return }
             if let cardFace = self.cardDisplayer.makeCardFace(from: self.cards[tag].imageAddress) {
                 card.image = cardFace
             }
