@@ -19,13 +19,13 @@
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F1N-Ru-LfG">
                                 <rect key="frame" x="19" y="59" width="150" height="256"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.66815863715277779" green="0.11686396190884381" blue="0.020463083261325021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uC2-Ca-3kF" appends="YES" id="cxf-ca-yHP"/>
+                                    <outletCollection property="gestureRecognizers" destination="uC2-Ca-3kF" appends="YES" id="pGt-37-PNO"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QLK-uc-W0y">
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QLK-uc-W0y">
                                 <rect key="frame" x="258" y="59" width="150" height="256"/>
                                 <color key="backgroundColor" red="0.14901960780000001" green="0.41568627450000001" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -34,32 +34,57 @@
                                     <constraint firstAttribute="height" constant="256" id="y3Q-I9-Mh4"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Veb-Si-Uzy" appends="YES" id="175-g9-hH0"/>
+                                    <outletCollection property="gestureRecognizers" destination="Veb-Si-Uzy" appends="YES" id="QDG-Ge-tt5"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yOQ-PQ-prT">
+                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yOQ-PQ-prT">
                                 <rect key="frame" x="497" y="59" width="150" height="256"/>
                                 <color key="backgroundColor" red="0.87058823529999996" green="0.85117426269074103" blue="0.48815426859525607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nZo-lQ-Y5b" appends="YES" id="Xk3-Ab-ekT"/>
+                                    <outletCollection property="gestureRecognizers" destination="nZo-lQ-Y5b" appends="YES" id="zS6-xP-EAH"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-F6-8Zo">
+                                <rect key="frame" x="77" y="334" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Present" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzH-LC-i6w">
+                                <rect key="frame" x="304" y="334" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufp-az-7b2">
+                                <rect key="frame" x="547" y="334" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="F1N-Ru-LfG" firstAttribute="height" secondItem="QLK-uc-W0y" secondAttribute="height" id="4yt-kq-Htl"/>
                             <constraint firstItem="yOQ-PQ-prT" firstAttribute="width" secondItem="QLK-uc-W0y" secondAttribute="width" id="CK2-Yf-XE6"/>
+                            <constraint firstItem="F1N-Ru-LfG" firstAttribute="bottom" secondItem="fiq-F6-8Zo" secondAttribute="bottom" constant="-40" id="F1A-oL-AhU"/>
                             <constraint firstItem="F1N-Ru-LfG" firstAttribute="top" secondItem="QLK-uc-W0y" secondAttribute="top" id="JGd-P6-aKd"/>
                             <constraint firstItem="yOQ-PQ-prT" firstAttribute="top" secondItem="QLK-uc-W0y" secondAttribute="top" id="JRt-eK-4SL"/>
                             <constraint firstItem="QLK-uc-W0y" firstAttribute="leading" secondItem="F1N-Ru-LfG" secondAttribute="trailing" constant="89" id="KJS-kR-qRc"/>
                             <constraint firstItem="F1N-Ru-LfG" firstAttribute="width" secondItem="QLK-uc-W0y" secondAttribute="width" id="O6k-Qy-4tO"/>
+                            <constraint firstItem="Ufp-az-7b2" firstAttribute="centerX" secondItem="yOQ-PQ-prT" secondAttribute="centerX" id="Pag-r2-kBl"/>
+                            <constraint firstItem="Ufp-az-7b2" firstAttribute="top" secondItem="fiq-F6-8Zo" secondAttribute="top" id="QEi-R3-2cU"/>
+                            <constraint firstItem="tzH-LC-i6w" firstAttribute="top" secondItem="Ufp-az-7b2" secondAttribute="top" id="Tib-Ay-oDS"/>
+                            <constraint firstItem="fiq-F6-8Zo" firstAttribute="centerX" secondItem="F1N-Ru-LfG" secondAttribute="centerX" id="Vc7-hC-aPd"/>
                             <constraint firstItem="F1N-Ru-LfG" firstAttribute="bottom" secondItem="QLK-uc-W0y" secondAttribute="bottom" id="WDy-Zt-84O"/>
                             <constraint firstItem="yOQ-PQ-prT" firstAttribute="height" secondItem="QLK-uc-W0y" secondAttribute="height" id="XOI-Tw-9br"/>
                             <constraint firstItem="yOQ-PQ-prT" firstAttribute="bottom" secondItem="QLK-uc-W0y" secondAttribute="bottom" id="avv-l6-lRp"/>
+                            <constraint firstItem="fiq-F6-8Zo" firstAttribute="top" secondItem="tzH-LC-i6w" secondAttribute="top" id="hvg-7E-8s7"/>
                             <constraint firstItem="QLK-uc-W0y" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ozx-NV-vII"/>
                             <constraint firstItem="QLK-uc-W0y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pFT-3q-tNj"/>
+                            <constraint firstItem="tzH-LC-i6w" firstAttribute="centerX" secondItem="QLK-uc-W0y" secondAttribute="centerX" id="xP5-Yv-YS4"/>
                             <constraint firstItem="yOQ-PQ-prT" firstAttribute="leading" secondItem="QLK-uc-W0y" secondAttribute="trailing" constant="89" id="zw7-YN-U9C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -77,17 +102,17 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="uC2-Ca-3kF">
                     <connections>
-                        <action selector="card1WasTapped:" destination="BYZ-38-t0r" id="7BM-Pq-VYu"/>
+                        <action selector="cardWasTapped:" destination="BYZ-38-t0r" id="fAY-P0-gCC"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Veb-Si-Uzy">
                     <connections>
-                        <action selector="card2WasTapped:" destination="BYZ-38-t0r" id="wwT-KZ-TlN"/>
+                        <action selector="cardWasTapped:" destination="BYZ-38-t0r" id="3Eh-mK-ZpJ"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="nZo-lQ-Y5b">
                     <connections>
-                        <action selector="card3WasTapped:" destination="BYZ-38-t0r" id="3oz-wg-YvM"/>
+                        <action selector="cardWasTapped:" destination="BYZ-38-t0r" id="rpx-WD-M6v"/>
                     </connections>
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="KRx-U1-z7x">
@@ -101,6 +126,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="32.833583208395808" y="68"/>
         </scene>
     </scenes>
 </document>

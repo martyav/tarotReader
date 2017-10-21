@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sy3-6l-jOa">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d3A-6W-oQJ">
+                                <rect key="frame" x="19" y="59" width="150" height="256"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView alpha="0.5" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NKQ-Ss-eqr">
+                                <rect key="frame" x="258" y="59" width="150" height="256"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="bx7-nM-ZoH"/>
+                                    <constraint firstAttribute="height" constant="256" id="zaZ-sH-OWM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView alpha="0.5" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aMR-3P-8Yr">
+                                <rect key="frame" x="497" y="59" width="150" height="256"/>
+                                <color key="backgroundColor" red="1" green="0.94923575233779056" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="d3A-6W-oQJ" firstAttribute="height" secondItem="NKQ-Ss-eqr" secondAttribute="height" id="0vs-bS-ujf"/>
+                            <constraint firstItem="aMR-3P-8Yr" firstAttribute="leading" secondItem="NKQ-Ss-eqr" secondAttribute="trailing" constant="89" id="AAp-SM-Jlr"/>
+                            <constraint firstItem="aMR-3P-8Yr" firstAttribute="top" secondItem="NKQ-Ss-eqr" secondAttribute="top" id="DTt-zy-7DW"/>
+                            <constraint firstItem="aMR-3P-8Yr" firstAttribute="width" secondItem="NKQ-Ss-eqr" secondAttribute="width" id="J0q-TE-fFU"/>
+                            <constraint firstItem="d3A-6W-oQJ" firstAttribute="top" secondItem="NKQ-Ss-eqr" secondAttribute="top" id="Pgv-Ip-vDe"/>
+                            <constraint firstItem="NKQ-Ss-eqr" firstAttribute="centerY" secondItem="Eit-Sn-kuJ" secondAttribute="centerY" id="VVY-Er-6fX"/>
+                            <constraint firstItem="NKQ-Ss-eqr" firstAttribute="leading" secondItem="d3A-6W-oQJ" secondAttribute="trailing" constant="89" id="VWB-eI-B8p"/>
+                            <constraint firstItem="NKQ-Ss-eqr" firstAttribute="centerX" secondItem="Eit-Sn-kuJ" secondAttribute="centerX" id="Zby-1F-9QO"/>
+                            <constraint firstItem="aMR-3P-8Yr" firstAttribute="bottom" secondItem="NKQ-Ss-eqr" secondAttribute="bottom" id="c6M-8H-lbK"/>
+                            <constraint firstItem="d3A-6W-oQJ" firstAttribute="width" secondItem="NKQ-Ss-eqr" secondAttribute="width" id="dNG-W3-NVO"/>
+                            <constraint firstItem="d3A-6W-oQJ" firstAttribute="bottom" secondItem="NKQ-Ss-eqr" secondAttribute="bottom" id="wgc-7P-a2d"/>
+                            <constraint firstItem="aMR-3P-8Yr" firstAttribute="height" secondItem="NKQ-Ss-eqr" secondAttribute="height" id="yLu-di-bzs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eit-Sn-kuJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+</document>
