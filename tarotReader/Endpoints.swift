@@ -9,5 +9,5 @@
 import Foundation
 
 struct Endpoint {
-    static let get = "https://martyav.site.swiftengine.net/tarot-deck.ssp?index=2"
+    static let get = "https://martyav.site.swiftengine.net/tarot-deck.ssp?card"
 }
