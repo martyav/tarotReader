@@ -19,6 +19,7 @@
 		05B51D1D1F9AE4DE008CE2B3 /* Arcana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D1C1F9AE4DE008CE2B3 /* Arcana.swift */; };
 		05B51D1F1F9BCB51008CE2B3 /* CardViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D1E1F9BCB51008CE2B3 /* CardViewManager.swift */; };
 		05B51D281F9C6404008CE2B3 /* ViewController+GrabCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D271F9C6404008CE2B3 /* ViewController+GrabCards.swift */; };
+		05B51D2A1F9C8520008CE2B3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D291F9C8520008CE2B3 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		05B51D1C1F9AE4DE008CE2B3 /* Arcana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcana.swift; sourceTree = "<group>"; };
 		05B51D1E1F9BCB51008CE2B3 /* CardViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewManager.swift; sourceTree = "<group>"; };
 		05B51D271F9C6404008CE2B3 /* ViewController+GrabCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+GrabCards.swift"; sourceTree = "<group>"; };
+		05B51D291F9C8520008CE2B3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				05B51D091F9A95AA008CE2B3 /* Assets.xcassets */,
 				05B51D0B1F9A95AA008CE2B3 /* LaunchScreen.storyboard */,
 				05B51D1E1F9BCB51008CE2B3 /* CardViewManager.swift */,
+				05B51D291F9C8520008CE2B3 /* CardView.swift */,
 			);
 			path = Visuals;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				05B51D281F9C6404008CE2B3 /* ViewController+GrabCards.swift in Sources */,
 				05B51D1D1F9AE4DE008CE2B3 /* Arcana.swift in Sources */,
 				05B51D051F9A95AA008CE2B3 /* ViewController.swift in Sources */,
+				05B51D2A1F9C8520008CE2B3 /* CardView.swift in Sources */,
 				05B51D1B1F9AE490008CE2B3 /* TarotCard.swift in Sources */,
 				05B51D1F1F9BCB51008CE2B3 /* CardViewManager.swift in Sources */,
 				05B51D191F9A96A1008CE2B3 /* APIRequestManager.swift in Sources */,

@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F1N-Ru-LfG">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F1N-Ru-LfG" customClass="CardView" customModule="tarotReader" customModuleProvider="target">
                                 <rect key="frame" x="19" y="59" width="150" height="256"/>
                                 <color key="backgroundColor" red="0.66815863715277779" green="0.11686396190884381" blue="0.020463083261325021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -25,7 +25,7 @@
                                     <outletCollection property="gestureRecognizers" destination="uC2-Ca-3kF" appends="YES" id="pGt-37-PNO"/>
                                 </connections>
                             </imageView>
-                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QLK-uc-W0y">
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QLK-uc-W0y" customClass="CardView" customModule="tarotReader" customModuleProvider="target">
                                 <rect key="frame" x="258" y="59" width="150" height="256"/>
                                 <color key="backgroundColor" red="0.14901960780000001" green="0.41568627450000001" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -37,7 +37,7 @@
                                     <outletCollection property="gestureRecognizers" destination="Veb-Si-Uzy" appends="YES" id="QDG-Ge-tt5"/>
                                 </connections>
                             </imageView>
-                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yOQ-PQ-prT">
+                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yOQ-PQ-prT" customClass="CardView" customModule="tarotReader" customModuleProvider="target">
                                 <rect key="frame" x="497" y="59" width="150" height="256"/>
                                 <color key="backgroundColor" red="0.87058823529999996" green="0.85117426269074103" blue="0.48815426859525607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -111,9 +111,9 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="card1" destination="F1N-Ru-LfG" id="Ns2-Vs-qHL"/>
-                        <outlet property="card2" destination="QLK-uc-W0y" id="dOK-E9-XhY"/>
-                        <outlet property="card3" destination="yOQ-PQ-prT" id="mFl-ZI-VJ0"/>
+                        <outlet property="card1" destination="F1N-Ru-LfG" id="Gc4-6n-RiD"/>
+                        <outlet property="card2" destination="QLK-uc-W0y" id="zHI-Yv-fY7"/>
+                        <outlet property="card3" destination="yOQ-PQ-prT" id="EUv-fR-5Pm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

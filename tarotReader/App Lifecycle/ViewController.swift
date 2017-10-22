@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var card1: UIImageView!
-    @IBOutlet weak var card2: UIImageView!
-    @IBOutlet weak var card3: UIImageView!
+    @IBOutlet weak var card1: CardView!
+    @IBOutlet weak var card2: CardView!
+    @IBOutlet weak var card3: CardView!
     
     var networkManager: APIRequestManager!
     var cardViewManager: CardViewManager!
@@ -26,16 +26,13 @@ class ViewController: UIViewController {
         self.cards = []
         
         self.grabCards()
-        
-        self.cardViewManager.makeCardBacks([self.card1, self.card2, self.card3])
-        self.cardViewManager.shade(views: [self.card1, self.card2, self.card3])
     }
     
     // MARK: - Button Actions
     
     @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
         let cardViews = [card1!, card2!, card3!]
-        let faceUpCards = cardViews.filter { cardViewManager.checkFaceUp($0) }
+        let faceUpCards = cardViews.filter { $0.isFaceUp() }
         
         switch faceUpCards.count {
         case 0:
@@ -58,7 +55,7 @@ class ViewController: UIViewController {
     
     @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
         let cardViews = [card1!, card2!, card3!]
-        let faceUpCards = cardViews.filter { cardViewManager.checkFaceUp($0) }
+        let faceUpCards = cardViews.filter {$0.isFaceUp() }
         
         if faceUpCards.count > 1 { return }
         
@@ -84,7 +81,7 @@ class ViewController: UIViewController {
     
     @IBAction func cardWasTapped(_ sender: UITapGestureRecognizer) {
         guard let tag = sender.view?.tag else { return }
-        var card: UIImageView
+        var card: CardView
         
         switch tag {
         case 0:
@@ -97,15 +94,24 @@ class ViewController: UIViewController {
             return
         }
         
-        if cardViewManager.checkFaceUp(card) == false {
+        if  card.isFaceDown() {
             guard let lastCard = self.cards.popLast() else { return }
             
+            card.associatedCard = lastCard
+            
             DispatchQueue.main.async {
-                if let cardFace = self.cardViewManager.makeCardFace(from: lastCard.imageAddress) {
+                if let cardFace = card.makeCardFace() {
                     card.image = cardFace
                 }
             }
             
+        } else {
+            let title = self.cards[tag].title
+            let message = self.cards[tag].description
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+            
+            present(alert, animated: true, completion: nil)
         }
         
     }
@@ -115,7 +121,7 @@ class ViewController: UIViewController {
         self.grabCards()
         
         DispatchQueue.main.async {
-            self.cardViewManager.makeCardBacks([self.card1, self.card2, self.card3])
+            _ = [self.card1, self.card2, self.card3].map { $0?.associatedCard = nil; $0?.makeCardBack() }
         }
     }
     
