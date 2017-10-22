@@ -63,11 +63,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-7m-4rF">
+                                <rect key="frame" x="8" y="8" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="K97-hB-7SP"/>
+                                    <constraint firstAttribute="height" constant="44" id="Plu-6s-3Oh"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="Refresh">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHy-1N-gS2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Pfd-7m-4rF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="2Dw-1r-fK2"/>
                             <constraint firstItem="F1N-Ru-LfG" firstAttribute="height" secondItem="QLK-uc-W0y" secondAttribute="height" id="4yt-kq-Htl"/>
+                            <constraint firstItem="Pfd-7m-4rF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Bev-40-K9c"/>
                             <constraint firstItem="yOQ-PQ-prT" firstAttribute="width" secondItem="QLK-uc-W0y" secondAttribute="width" id="CK2-Yf-XE6"/>
                             <constraint firstItem="F1N-Ru-LfG" firstAttribute="bottom" secondItem="fiq-F6-8Zo" secondAttribute="bottom" constant="-40" id="F1A-oL-AhU"/>
                             <constraint firstItem="F1N-Ru-LfG" firstAttribute="top" secondItem="QLK-uc-W0y" secondAttribute="top" id="JGd-P6-aKd"/>
@@ -129,4 +146,7 @@
             <point key="canvasLocation" x="32.833583208395808" y="68"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Refresh" width="50" height="50"/>
+    </resources>
 </document>

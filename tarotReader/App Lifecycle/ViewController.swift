@@ -26,9 +26,10 @@ class ViewController: UIViewController {
         self.cardDisplayer = CardDisplayer()
         self.cards = []
         
-        grabCards()
+        self.grabCards()
         
-        cardDisplayer.shade(views: [self.card1, self.card2, self.card3])
+        self.cardDisplayer.makeCardBacks([self.card1, self.card2, self.card3])
+        self.cardDisplayer.shade(views: [self.card1, self.card2, self.card3])
     }
     
     func grabCards() {
@@ -48,9 +49,9 @@ class ViewController: UIViewController {
                         }
                         
                         if let card = TarotCard(dict: response) {
-                                self.cards.append(card)
-                                print(card.title)
-                                print(self.cards.count)
+                            self.cards.append(card)
+                            print(card.title)
+                            print(self.cards.count)
                         }
                         
                     }
@@ -100,7 +101,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cardWasTapped(_ sender: UITapGestureRecognizer) {
-        
         guard let tag = sender.view?.tag else { return }
         var card: UIImageView
         
@@ -115,16 +115,26 @@ class ViewController: UIViewController {
             return
         }
         
-        guard card.image == nil else { return }
+        if card.image?.imageAsset! == #imageLiteral(resourceName: "Back").imageAsset! {
+            guard let lastCard = self.cards.popLast() else { return }
+            
+            DispatchQueue.main.async {
+                if let cardFace = self.cardDisplayer.makeCardFace(from: lastCard.imageAddress) {
+                    card.image = cardFace
+                }
+            }
+            
+        }
         
-        guard self.cards.count > tag else { return }
+    }
+    
+    @IBAction func refreshWasTapped(_ sender: UIButton) {
+        self.cards = []
+        self.grabCards()
         
         DispatchQueue.main.async {
-            if let cardFace = self.cardDisplayer.makeCardFace(from: self.cards[tag].imageAddress) {
-                card.image = cardFace
-            }
+            self.cardDisplayer.makeCardBacks([self.card1, self.card2, self.card3])
         }
     }
     
 }
-

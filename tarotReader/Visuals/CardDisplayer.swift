@@ -56,4 +56,8 @@ struct CardDisplayer {
         
         return nil
     }
+    
+    func makeCardBacks(_ cards: [UIImageView]) {
+        _ = cards.map { $0.image = UIImage(named: "Back") }
+    }
 }
