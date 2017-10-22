@@ -8,25 +8,8 @@
 
 import UIKit
 
-struct CardDisplayer {
+struct CardViewManager {
     init() {}
-    
-    func generateThreeRandomIndices() -> [Int] {
-        let deckSize: UInt32 = 3
-        var randomCardIndexes: [Int] = []
-        
-        while randomCardIndexes.count < 3 {
-            let freshIndex = arc4random_uniform(deckSize)
-            
-            guard !randomCardIndexes.contains(Int(freshIndex)) else {
-                continue
-            }
-            
-            randomCardIndexes.append(Int(freshIndex))
-        }
-        
-        return randomCardIndexes
-    }
     
     func shade(views: [UIView]) {
         for view in views {
@@ -65,28 +48,7 @@ struct CardDisplayer {
         return !(card.image?.imageAsset! == #imageLiteral(resourceName: "Back").imageAsset!)
     }
     
-    func moveAllCardsRight(_ cards: [UIImageView]) {
-        guard cards.count == 3 else { return }
-        
-        let firstCardColor = cards[0].backgroundColor
-        let firstCardImage = cards[0].image
-        let secondCardColor = cards[1].backgroundColor
-        let secondCardImage = cards[1].image
-        let thirdCardColor = cards[2].backgroundColor
-        let thirdCardImage = cards[2].image
-        
-        DispatchQueue.main.async {
-            cards[0].backgroundColor = thirdCardColor
-            cards[1].backgroundColor = firstCardColor
-            cards[2].backgroundColor = secondCardColor
-            cards[0].image = thirdCardImage
-            cards[1].image = firstCardImage
-            cards[2].image = secondCardImage
-            
-        }
-    }
-    
-    func moveAllCardsLeft(_ cards: [UIImageView]) {
+    func moveAllCards(_ cards: [UIImageView]) {
         guard cards.count == 3 else { return }
         
         let firstCardColor = cards[0].backgroundColor
