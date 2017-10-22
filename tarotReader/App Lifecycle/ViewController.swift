@@ -64,39 +64,51 @@ class ViewController: UIViewController {
     }
     
     @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
+        let cardViews = [card1!, card2!, card3!]
+        let faceUpCards = cardViews.filter { cardDisplayer.checkFaceUp($0) }
         
-        let firstCardColor = self.card1.backgroundColor
-        let firstCardImage = self.card1.image
-        let secondCardColor = self.card2.backgroundColor
-        let secondCardImage = self.card2.image
-        let thirdCardColor = self.card3.backgroundColor
-        let thirdCardImage = self.card3.image
-        
-        self.card1.backgroundColor = thirdCardColor
-        self.card2.backgroundColor = firstCardColor
-        self.card3.backgroundColor = secondCardColor
-        self.card1.image = thirdCardImage
-        self.card2.image = firstCardImage
-        self.card3.image = secondCardImage
+        switch faceUpCards.count {
+        case 0:
+            cardDisplayer.moveAllCardsRight(cardViews)
+        case 1:
+            switch faceUpCards.first! {
+            case card1:
+                cardDisplayer.moveTwoCards(first: self.card2, second: self.card3)
+            case card2:
+                cardDisplayer.moveTwoCards(first: self.card1, second: self.card3)
+            case card3:
+                cardDisplayer.moveTwoCards(first: self.card1, second: self.card2)
+            default:
+                return
+            }
+        default:
+            return
+        }
     }
     
     @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
-        DispatchQueue.main.async {
+        let cardViews = [card1!, card2!, card3!]
+        let faceUpCards = cardViews.filter { cardDisplayer.checkFaceUp($0) }
+        
+        if faceUpCards.count > 1 { return }
+        
+        switch faceUpCards.count {
             
-            let firstCardColor = self.card1.backgroundColor
-            let firstCardImage = self.card1.image
-            let secondCardColor = self.card2.backgroundColor
-            let secondCardImage = self.card2.image
-            let thirdCardColor = self.card3.backgroundColor
-            let thirdCardImage = self.card3.image
-            
-            self.card1.backgroundColor = secondCardColor
-            self.card2.backgroundColor = thirdCardColor
-            self.card3.backgroundColor = firstCardColor
-            self.card1.image = secondCardImage
-            self.card2.image = thirdCardImage
-            self.card3.image = firstCardImage
-            
+        case 0:
+            cardDisplayer.moveAllCardsLeft(cardViews)
+        case 1:
+            switch faceUpCards.first! {
+            case card1:
+               cardDisplayer.moveTwoCards(first: self.card3, second: self.card2)
+            case card2:
+                cardDisplayer.moveTwoCards(first: self.card3, second: self.card1)
+            case card3:
+               cardDisplayer.moveTwoCards(first: self.card2, second: self.card1)
+            default:
+                return
+            }
+        default:
+            return
         }
     }
     

@@ -60,4 +60,63 @@ struct CardDisplayer {
     func makeCardBacks(_ cards: [UIImageView]) {
         _ = cards.map { $0.image = UIImage(named: "Back") }
     }
+    
+    func checkFaceUp(_ card: UIImageView) -> Bool {
+        return !(card.image?.imageAsset! == #imageLiteral(resourceName: "Back").imageAsset!)
+    }
+    
+    func moveAllCardsRight(_ cards: [UIImageView]) {
+        guard cards.count == 3 else { return }
+        
+        let firstCardColor = cards[0].backgroundColor
+        let firstCardImage = cards[0].image
+        let secondCardColor = cards[1].backgroundColor
+        let secondCardImage = cards[1].image
+        let thirdCardColor = cards[2].backgroundColor
+        let thirdCardImage = cards[2].image
+        
+        DispatchQueue.main.async {
+            cards[0].backgroundColor = thirdCardColor
+            cards[1].backgroundColor = firstCardColor
+            cards[2].backgroundColor = secondCardColor
+            cards[0].image = thirdCardImage
+            cards[1].image = firstCardImage
+            cards[2].image = secondCardImage
+            
+        }
+    }
+    
+    func moveAllCardsLeft(_ cards: [UIImageView]) {
+        guard cards.count == 3 else { return }
+        
+        let firstCardColor = cards[0].backgroundColor
+        let firstCardImage = cards[0].image
+        let secondCardColor = cards[1].backgroundColor
+        let secondCardImage = cards[1].image
+        let thirdCardColor = cards[2].backgroundColor
+        let thirdCardImage = cards[2].image
+        
+        DispatchQueue.main.async {
+            cards[0].backgroundColor = secondCardColor
+            cards[1].backgroundColor = thirdCardColor
+            cards[2].backgroundColor = firstCardColor
+            cards[0].image = secondCardImage
+            cards[1].image = thirdCardImage
+            cards[2].image = firstCardImage
+        }
+    }
+    
+    func moveTwoCards(first: UIImageView, second: UIImageView) {
+        let firstCardColor = first.backgroundColor
+        let firstCardImage = first.image
+        let secondCardColor = second.backgroundColor
+        let secondCardImage = second.image
+        
+        DispatchQueue.main.async {
+            first.backgroundColor = secondCardColor
+            second.backgroundColor = firstCardColor
+            first.image = secondCardImage
+            second.image = firstCardImage
+        }
+    }
 }
