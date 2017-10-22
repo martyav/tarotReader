@@ -8,6 +8,10 @@
 
 import Foundation
 
+fileprivate let cardAPIQueue = DispatchQueue(
+    label: "ssp.tarot-deck.swiftengine.net.martyav.site",
+    attributes: .concurrent)
+
 class APIRequestManager {
     
     func getData(endPoint: String, callback: @escaping (Data?) -> Void) {
@@ -20,7 +24,9 @@ class APIRequestManager {
             }
             guard let validData = data else { return }
            
-            callback(validData)
+            cardAPIQueue.async(flags: .barrier) {
+                callback(validData)
+            }
             
             }.resume()
     }
