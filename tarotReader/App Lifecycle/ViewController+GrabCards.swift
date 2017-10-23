@@ -11,8 +11,9 @@ import UIKit
 extension ViewController {
     func generateThreeRandomIndices(deckSize: UInt32) -> [Int] {
         var randomCardIndexes: [Int] = []
+        let numberOfCardsDealt: Int = 3
         
-        while randomCardIndexes.count < deckSize {
+        while randomCardIndexes.count < numberOfCardsDealt {
             let freshIndex = arc4random_uniform(deckSize)
             
             guard !randomCardIndexes.contains(Int(freshIndex)) else {
@@ -26,10 +27,10 @@ extension ViewController {
     }
     
     func grabCards() {
-        let indices = generateThreeRandomIndices(deckSize: 3)
+        let indices = generateThreeRandomIndices(deckSize: 23)
         
         for index in 0..<indices.count {
-            let cardURL = "\(Endpoint.get)=\(index)"
+            let cardURL = "\(Endpoint.get)=\(indices[index])"
             
             self.networkManager.getData(endPoint: cardURL) { (data: Data?) in
                 if let validData = data {

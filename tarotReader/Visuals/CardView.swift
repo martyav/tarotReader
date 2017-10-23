@@ -21,14 +21,14 @@ class CardView: UIImageView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+
         self.makeCardBack()
         self.shade()
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         self.makeCardBack()
         self.shade()
     }
@@ -41,7 +41,7 @@ class CardView: UIImageView {
             self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
             self.layer.shouldRasterize = false
     }
-    
+
     func makeCardBack() {
         self.image = UIImage(named: "Back")
     }
@@ -69,7 +69,7 @@ class CardView: UIImageView {
     func isFaceDown() -> Bool {
         return self.image?.imageAsset! == #imageLiteral(resourceName: "Back").imageAsset!
     }
-    
+   
     func isFaceUp() -> Bool {
         return self.image?.imageAsset! != #imageLiteral(resourceName: "Back").imageAsset!
     }

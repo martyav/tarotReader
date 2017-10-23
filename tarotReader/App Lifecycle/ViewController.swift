@@ -106,10 +106,17 @@ class ViewController: UIViewController {
             }
             
         } else {
-            let title = self.cards[tag].title
-            let message = self.cards[tag].description
+            let title = card.associatedCard?.title
+            let message = card.associatedCard?.description
             
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.view.tintColor = UIColor.darkGray
+            let dismissButton = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default) {
+                (result : UIAlertAction) -> Void in
+                print("OK")
+            }
+            
+            alert.addAction(dismissButton)
             
             present(alert, animated: true, completion: nil)
         }

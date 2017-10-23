@@ -40,7 +40,9 @@ class TarotCard {
     }
     
     static  func findArcana(for address: String) -> Arcana {
-        let scalars = address.unicodeScalars
+        let components = address.components(separatedBy: CharacterSet.punctuationCharacters)
+        let imageName = components[8]
+        let scalars = imageName.unicodeScalars
         let thirdIndex = scalars.index(address.startIndex, offsetBy: 2)
         let thirdCharacter = scalars[thirdIndex]
         
