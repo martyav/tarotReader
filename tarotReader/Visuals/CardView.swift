@@ -9,15 +9,7 @@
 import UIKit
 
 class CardView: UIImageView {
-    var associatedCard: TarotCard? 
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    var associatedCard: TarotCard?
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

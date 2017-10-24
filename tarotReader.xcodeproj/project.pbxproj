@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055BA37E1F9EE55700EE5C5F /* CardPopOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055BA37D1F9EE55700EE5C5F /* CardPopOver.swift */; };
 		05B51D031F9A95AA008CE2B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D021F9A95AA008CE2B3 /* AppDelegate.swift */; };
 		05B51D051F9A95AA008CE2B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B51D041F9A95AA008CE2B3 /* ViewController.swift */; };
 		05B51D081F9A95AA008CE2B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B51D061F9A95AA008CE2B3 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055BA37D1F9EE55700EE5C5F /* CardPopOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPopOver.swift; sourceTree = "<group>"; };
 		05B51CFF1F9A95AA008CE2B3 /* tarotReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarotReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B51D021F9A95AA008CE2B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B51D041F9A95AA008CE2B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				05B51D091F9A95AA008CE2B3 /* Assets.xcassets */,
 				05B51D0B1F9A95AA008CE2B3 /* LaunchScreen.storyboard */,
 				05B51D1E1F9BCB51008CE2B3 /* CardViewManager.swift */,
+				055BA37D1F9EE55700EE5C5F /* CardPopOver.swift */,
 				05B51D291F9C8520008CE2B3 /* CardView.swift */,
 			);
 			path = Visuals;
@@ -202,6 +205,7 @@
 				05B51D191F9A96A1008CE2B3 /* APIRequestManager.swift in Sources */,
 				05B51D181F9A96A1008CE2B3 /* Endpoints.swift in Sources */,
 				05B51D031F9A95AA008CE2B3 /* AppDelegate.swift in Sources */,
+				055BA37E1F9EE55700EE5C5F /* CardPopOver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

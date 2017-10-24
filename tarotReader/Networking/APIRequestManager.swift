@@ -30,6 +30,4 @@ class APIRequestManager {
             
             }.resume()
     }
-
-    
 }

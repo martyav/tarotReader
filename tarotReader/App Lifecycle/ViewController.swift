@@ -16,14 +16,12 @@ class ViewController: UIViewController {
     
     var networkManager: APIRequestManager!
     var cardViewManager: CardViewManager!
-    var cards: [TarotCard]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.networkManager = APIRequestManager()
         self.cardViewManager = CardViewManager()
-        self.cards = []
         
         self.grabCards()
     }
@@ -81,50 +79,40 @@ class ViewController: UIViewController {
     
     @IBAction func cardWasTapped(_ sender: UITapGestureRecognizer) {
         guard let tag = sender.view?.tag else { return }
-        var card: CardView
+        var cardView: CardView
         
         switch tag {
         case 0:
-            card = self.card1
+            cardView = self.card1
         case 1:
-            card = self.card2
+            cardView = self.card2
         case 2:
-            card = self.card3
+            cardView = self.card3
         default:
             return
         }
         
-        if  card.isFaceDown() {
-            guard let lastCard = self.cards.popLast() else { return }
+        if cardView.isFaceDown() {
+            guard let lastCard = TarotCard.deck.popLast() else { return }
             
-            card.associatedCard = lastCard
+            cardView.associatedCard = lastCard
             
             DispatchQueue.main.async {
-                if let cardFace = card.makeCardFace() {
-                    card.image = cardFace
+                if let cardFace = cardView.makeCardFace() {
+                    cardView.image = cardFace
                 }
             }
             
         } else {
-            let title = card.associatedCard?.title
-            let message = card.associatedCard?.description
-            
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-            alert.view.tintColor = UIColor.darkGray
-            let dismissButton = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default) {
-                (result : UIAlertAction) -> Void in
-                print("OK")
-            }
-            
-            alert.addAction(dismissButton)
-            
+            guard let tappedCard = cardView.associatedCard else { return }
+            let alert = showDescription(for: tappedCard)
             present(alert, animated: true, completion: nil)
         }
         
     }
     
     @IBAction func refreshWasTapped(_ sender: UIButton) {
-        self.cards = []
+        TarotCard.deck = []
         self.grabCards()
         
         DispatchQueue.main.async {

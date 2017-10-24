@@ -14,6 +14,8 @@ class TarotCard {
     let description: String
     let arcana: Arcana
     
+    static var deck: [TarotCard] = []
+    
     init(title: String, image: String, description: String) {
         self.title = title
         self.imageAddress = URL(string: image)!

@@ -43,9 +43,9 @@ extension ViewController {
                         }
                         
                         if let card = TarotCard(dict: response) {
-                            self.cards.append(card)
+                            TarotCard.deck.append(card)
                             print(card.title)
-                            print(self.cards.count)
+                            print(TarotCard.deck.count)
                         }
                         
                     }
